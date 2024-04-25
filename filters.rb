@@ -2,19 +2,17 @@
 # This way, we keep these methods separated from other potential parts of the program
 
 def find(id)
-    # Your code Here
-  end
-  
-  def experienced?(candidate)
-    if candidate[:years_of_experience] && candidate[:years_of_experience] >= 2
-      return true
-    else
-      return false
-    end
-  end
-  
-  def qualified_candidates(candidates)
-    # Your code Here
-  end
-  
-  # More methods will go below
+   candidate = @candidates.find { |c| c[:id] == id }
+
+   candidate
+end
+
+def experienced?(candidate)
+  candidate[:years_of_experience] && candidate[:years_of_experience] >= 2
+end
+
+def qualified_candidates(candidates)
+  # Your code Here
+end
+
+# More methods will go below
